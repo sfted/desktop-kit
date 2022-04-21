@@ -1,6 +1,6 @@
-﻿using System;
+﻿namespace DesktopKit.Models;
 
-namespace DesktopKit.Models;
+using System;
 
 public class JournalEntry
 {

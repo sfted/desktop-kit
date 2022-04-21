@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Input;
+﻿namespace DesktopKit.MVVM;
 
-namespace DesktopKit.MVVM;
+using System;
+using System.Windows.Input;
 
 public class Command : ICommand
 {
