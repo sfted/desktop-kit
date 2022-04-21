@@ -88,6 +88,7 @@ public class NavigationService : INavigationService
     }
 
     protected Type ResolvePageType(string pageId) =>
-        PageTypes.ContainsKey(pageId) ? PageTypes[pageId] : NotFoundPage;
+        !string.IsNullOrEmpty(pageId) ?
+            PageTypes.ContainsKey(pageId) ? PageTypes[pageId] : NotFoundPage
+        : NotFoundPage;
 }
-
