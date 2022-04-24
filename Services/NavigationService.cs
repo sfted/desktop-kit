@@ -71,9 +71,13 @@ public class NavigationService : INavigationService
             NavigateThroughTheJournal(Journal[CurrentEntry.JournalIndex + 1]);
     }
 
-    public bool CanNavigateBack() => CurrentEntry.JournalIndex > 0;
+    public bool CanNavigateBack() =>
+        CurrentEntry != null &&
+        CurrentEntry.JournalIndex > 0;
 
-    public bool CanNavigateForward() => CurrentEntry.JournalIndex + 1 < Journal.Count;
+    public bool CanNavigateForward() =>
+        CurrentEntry != null &&
+        CurrentEntry.JournalIndex + 1 < Journal.Count;
 
     public async Task ShowDialogAsync(ContentDialog dialog)
     {
